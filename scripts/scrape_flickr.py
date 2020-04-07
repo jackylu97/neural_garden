@@ -39,7 +39,9 @@ config = """
 
     "netrc": false
 }}
-""".format(GALLERY_DL_FOLDER)
+""".format(
+    GALLERY_DL_FOLDER
+)
 
 text_file = open("gallery-dl.conf", "w")
 n = text_file.write(config)
@@ -55,5 +57,5 @@ flickr_groups = [
 
 scrapeCommand = "gallery-dl --range 1-10 -c gallery-dl.conf https://www.flickr.com/groups/2297498@N20/"
 process = subprocess.Popen(scrapeCommand.split(), stdout=subprocess.PIPE)
-for line in iter(process.stdout.readline, b''):  # replace '' with b'' for Python 3
+for line in iter(process.stdout.readline, b""):
     sys.stdout.write(line.decode("utf-8"))

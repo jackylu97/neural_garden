@@ -1,4 +1,4 @@
-import Augmentor
+import Augmentor  # pylint:disable=import-error
 
 # Augmentor doesn't reset working directory after
 # navigating to INPUT_PATH, apparently
