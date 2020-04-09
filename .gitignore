@@ -6,4 +6,5 @@ gallery-dl.conf
 resized
 
 # don't add stylegan
+stylegan
 stylegan2
